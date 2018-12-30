@@ -1,0 +1,98 @@
+/*
+ * Paul H Comitz 
+ * Project 0
+ * scss file 
+ 12/29/2018
+ * convert to css with scout app 
+ but Scout does not work 
+ choco and dart sdk don't seem to install sass on windows <sigh>
+ This seems to work
+ https://jakeprice.tech/2018/07/29/setting-up-dart-sass-on-windows/
+
+ Download from 
+ https://github.com/sass/dart-sass/releases/tag/1.15.2
+
+ sass project0sass.scss project0.css
+
+ Note to reviwers: On windows this entire sass 
+ exercise is a bit of a waste of time. 10 minutes in class 
+ translates to several hours of seraching around to install 
+ and configure the tools 
+ There could have used at least some explanation - even if 
+ very brief 
+ */
+/* required sass var */
+small {
+  text-align: center;
+  color: navy;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* required sass nesting */
+div p {
+  color: navy;
+}
+
+/* extend jumbotron */
+/* used for the header of all pages */
+.jumbotron {
+  margin-bottom: 20px;
+  background-image: url(./img/Top-full-on-50percent.jpg);
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-weight: bold;
+  /* text-shadow: black 0.1em 0.1em 0.1em; */
+}
+
+/* extend card-img-top */
+/* tip from
+https://stackoverflow.com/questions/37287153/how-to-get-images-in-bootstraps-card-to-be-the-same-height-width 
+*/
+.card-img-top {
+  width: 40vw;
+  height: 40vw;
+  object-fit: cover;
+}
+
+/* required CSS media query 
+   when the screen is more than 500 px, background is white, 
+   otherwwise background is lightgrey 
+*/
+@media screen and (max-width: 500px) {
+  body {
+    background-color: lightgrey;
+  }
+}
+/* example from w3schools, using id selector, modified for flapickers  */
+/* https://www.w3schools.com/css/css_table.asp */
+#flatpickers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#flatpickers td, #flatpickers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#flatpickers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#flatpickers tr:hover {
+  background-color: #ddd;
+}
+
+#flatpickers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #7994b3;
+  color: white;
+}
+
+/*# sourceMappingURL=project0sass.css.map */
